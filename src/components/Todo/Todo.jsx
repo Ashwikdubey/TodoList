@@ -8,7 +8,7 @@ function Todo({todoText,onDelete,onEdit,isFinished,onFinished}){
     return(
         <>
         <div className="flex items-center w-full justify-between bg-[#8758ff] py-[0.4rem] px-3 text-white cursor-pointer mb-4 rounded-md ">
-            {isEdit?<input type="text" className="p-1 rounded-md outline-none capitalize border-2" value={editText} onChange={(e)=>setEditText(e.target.value)}></input>:<h1>{todoText}</h1>}
+            {isEdit?<input type="text" className="p-1 rounded-md outline-none bg-transparent text-white border-[1px] border-white" value={editText} onChange={(e)=>setEditText(e.target.value)}></input>:<h1>{todoText}</h1>}
             <div className="flex gap-5 items-center">
                 <input type="checkbox" checked={updateFinished} onChange={(e)=>{setUpdateFinished(e.target.checked)
                     onFinished(e.target.checked)
